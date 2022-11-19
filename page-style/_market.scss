@@ -1,0 +1,129 @@
+// head market
+
+.head-market {
+    height: 150px !important;
+    &::before {
+        position: relative !important;
+        width: 0 !important;
+        height: 0 !important;
+    }
+}
+
+
+/* Start Content Market Page */
+.content-market {
+    padding-top: 30px;
+    padding-bottom: 40px;
+
+    .main-container {
+        .cart-section {
+            display: flex;
+            gap: 25px;
+
+            table {
+                width: 80%;
+                tbody {
+                    td {
+                        img {
+                            height: 85px;
+                        }
+                    } 
+
+                       svg {
+                        width: 30px;
+                    }
+                }
+            }
+
+            .checkout {
+                width: 20%;
+                .subtotal {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .subtotal-text {
+                        font-size: 22px;
+                        font-weight: 500;
+                    }
+                    .subtotal-number {
+                        font-weight: 500;
+                        font-size: 19px;
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+                    margin-top: 15px;
+                    display: block;
+                    background-color: rgba(255, 166, 0, 0.9960784314);
+                    padding: 7px 2px;
+                    text-align: center;
+                    border-radius: 8px;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+/* End Content Market Page */
+
+@media (max-width: 767px) {
+    .content-market {
+        padding-top: 0px !important;
+
+        .main-container {
+            .cart-section {
+                flex-direction: column;
+                align-items: center;
+
+                table {
+                    width: 100%;
+
+                    th {
+                        font-size: 14px;
+                    }
+
+                    tbody {
+                        td {
+                            font-size: 14px;
+
+                            img {
+                                height: 55px;
+                            }
+                        } 
+    
+                           svg {
+                            width: 20px;
+                        }
+                    }
+
+                    .qty {
+                        display: none;
+                    }
+                }
+
+                .checkout {
+                    width: 50%;
+
+                    .subtotal {
+                        .subtotal-text {
+                            font-size: 19px;
+                        }
+
+                        .subtotal-number {
+                            font-size: 17px;
+                        }
+                    }
+
+                    a {
+                        padding: 6px 0px;
+                        font-size: 14px;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+

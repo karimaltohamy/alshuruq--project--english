@@ -1,0 +1,65 @@
+* {
+    outline: none;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+
+    &::selection {
+        background-color: #ffa600fe;
+        color: #FFF;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden !important;
+}
+
+body {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    overflow-x: hidden !important;
+    position: relative;
+}
+
+.main-container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .main-container {
+        width: 750px;
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+    .main-container {
+        width: 970px;
+    }
+}
+/* Large */
+@media (min-width: 1200px) {
+    .main-container {
+        width: 1300px;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #FFF;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ffa600fe;
+}
+
+.active-link {
+    color: #ffa600fe !important;
+}
