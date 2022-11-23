@@ -2298,6 +2298,9 @@ body {
   max-width: 100%;
   height: 500px;
 }
+.section-services .content-services .text-sevices {
+  width: 50%;
+}
 .section-services .content-services .text-sevices .sub-title-services {
   color: rgba(255, 166, 0, 0.9960784314);
   font-size: 20px;
@@ -2387,6 +2390,9 @@ body {
   .section-services .content-services .img-services {
     width: 100%;
     height: 250px;
+  }
+  .section-services .content-services .text-sevices {
+    width: 100%;
   }
   .section-services .content-services .text-sevices .sub-title-services {
     font-size: 16px !important;

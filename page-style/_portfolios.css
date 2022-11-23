@@ -1,5 +1,92 @@
 .boxs-services {
-  padding: 150px 0 0;
+  margin: 130px 0 0;
+  background-color: rgba(255, 166, 0, 0.9960784314);
+  padding: 40px 0;
+}
+.boxs-services .main-title-services {
+  font-size: 50px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 20px;
+}
+.boxs-services .main-title-services::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  border-radius: 0 10px 10px 0;
+  width: 0%;
+  background-color: black;
+  z-index: 22;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-animation: fillWidth 1.5s infinite alternate;
+          animation: fillWidth 1.5s infinite alternate;
+}
+.boxs-services .main-title-services::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  border-radius: 0 10px 10px 0;
+  width: 100%;
+  background-color: white;
+}
+.boxs-services .content-boxs {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+.boxs-services .content-boxs .box-services {
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.boxs-services .content-boxs .box-services .icon-box {
+  text-align: center;
+  width: 55px;
+  height: 55px;
+  border: 2px solid rgba(255, 166, 0, 0.9960784314);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.boxs-services .content-boxs .box-services .icon-box i {
+  color: rgba(255, 166, 0, 0.9960784314);
+  font-size: 25px;
+}
+.boxs-services .content-boxs .box-services .title-box {
+  margin: 10px 0;
+  font-size: 23px;
+  text-align: center;
+}
+.boxs-services .content-boxs .box-services .p-box {
+  margin: 0;
+  text-align: center;
+  color: #5b5b5b;
 }
 
 .section-boxs-portfolio {
@@ -53,25 +140,15 @@
   transition: all 0.4s;
   -webkit-box-shadow: 1px 4px 12px #a5a5a5;
           box-shadow: 1px 4px 12px #a5a5a5;
+  padding: 20px;
 }
 .section-boxs-portfolio .boxs-portfolio .box-portfolio:hover {
   -webkit-transform: translateY(-15px);
           transform: translateY(-15px);
 }
 .section-boxs-portfolio .boxs-portfolio .box-portfolio .img-box-portfolio {
-  height: 250px;
+  height: 100%;
   width: 100%;
-}
-.section-boxs-portfolio .boxs-portfolio .box-portfolio .content-box {
-  margin: 15px 0;
-}
-.section-boxs-portfolio .boxs-portfolio .box-portfolio .content-box .title-box {
-  font-size: 26px;
-  margin: 0 10px;
-}
-.section-boxs-portfolio .boxs-portfolio .box-portfolio .content-box .sub-title-box {
-  margin: 0 10px;
-  color: #5b5b5b;
 }
 
 .section-services {
@@ -86,6 +163,9 @@
 .section-services .content-services .img-services {
   max-width: 100%;
   height: 500px;
+}
+.section-services .content-services .text-sevices {
+  width: 50%;
 }
 .section-services .content-services .text-sevices .sub-title-services {
   color: rgba(255, 166, 0, 0.9960784314);
@@ -116,8 +196,37 @@
   }
 }
 @media (max-width: 700px) {
+  .boxs-services {
+    margin: 110px 0 0;
+    background-color: rgba(255, 166, 0, 0.9960784314);
+    padding: 20px 0;
+  }
+  .boxs-services .main-title-services {
+    font-size: 30px;
+  }
+  .boxs-services .content-boxs {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 25px;
+  }
+  .boxs-services .content-boxs .box-services {
+    padding: 10px 15px !important;
+  }
+  .boxs-services .content-boxs .box-services .icon-box {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .boxs-services .content-boxs .box-services .icon-box i {
+    font-size: 18px !important;
+  }
+  .boxs-services .content-boxs .box-services .title-box {
+    margin: 5px 0 !important;
+    font-size: 19px !important;
+  }
+  .boxs-services .content-boxs .box-services .p-box {
+    font-size: 13px;
+  }
   .section-boxs-portfolio {
-    padding: 115px 0 30px;
+    padding: 65px 0 30px;
   }
   .section-boxs-portfolio .main-title-portfolio {
     font-size: 30px !important;
@@ -126,22 +235,14 @@
     -ms-grid-columns: minmax(160px, 1fr) 15px minmax(160px, 1fr);
     grid-template-columns: repeat(2, minmax(160px, 1fr));
     gap: 15px;
+    padding: 8px !important;
   }
   .section-boxs-portfolio .boxs-portfolio:hover {
     -webkit-transform: translateY(-8px);
             transform: translateY(-8px);
   }
-  .section-boxs-portfolio .boxs-portfolio .img-box-portfolio {
-    height: 160px !important;
-  }
-  .section-boxs-portfolio .boxs-portfolio .content-box {
-    margin: 5px 0 10px !important;
-  }
-  .section-boxs-portfolio .boxs-portfolio .content-box .title-box {
-    font-size: 20px !important;
-  }
-  .section-boxs-portfolio .boxs-portfolio .content-box .sub-title-box {
-    font-size: 13px !important;
+  .section-boxs-portfolio .boxs-portfolio .box-portfolio {
+    padding: 10px;
   }
   .section-services {
     padding: 20px 0;
@@ -155,6 +256,9 @@
   .section-services .content-services .img-services {
     width: 100%;
     height: 250px;
+  }
+  .section-services .content-services .text-sevices {
+    width: 100%;
   }
   .section-services .content-services .text-sevices .sub-title-services {
     font-size: 16px !important;
@@ -174,9 +278,13 @@
     margin-top: 10px;
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 430px) {
+  .boxs-services .content-boxs {
+    -ms-grid-columns: (minmax(150px, 1fr))[1] !important;
+    grid-template-columns: repeat(1, minmax(150px, 1fr)) !important;
+  }
   .section-boxs-portfolio .boxs-portfolio {
-    -ms-grid-columns: (minmax(150px, 1fr))[1];
-    grid-template-columns: repeat(1, minmax(150px, 1fr));
+    -ms-grid-columns: (minmax(150px, 1fr))[1] !important;
+    grid-template-columns: repeat(1, minmax(150px, 1fr)) !important;
   }
 }
